@@ -5,32 +5,19 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import Pizzas from './Pizzas';
-import Drinks from './Drinks';
-import Snacks from './Snacks';
-import Discounts from './Discounts';
-import Contacts from './Contacts';
+import Pizzas from './components/Pizzas';
+import Drinks from './components/Drinks';
+import Snacks from './components/Snacks';
+import Discounts from './components/Discounts';
+import Contacts from './components/Contacts';
+import Header from './components/Header'
 /*import logos from './palermo-pizza-logo.jpeg';*/
-import logos from './pizza-logo.png';
 
 class App extends Component {
   render() {
     return (
       <div className="header">
-        <div className="logo">
-          <a href="/">
-            <img src={logos} />
-          </a>
-          <div className="address">
-            <p>Pizza Delivery in Almaty</p>
-            <p>Day&Night</p>
-          </div>
-          <div className="phone_number">
-            <p>Phone: </p>
-            <p>+7 771 207 89 95</p>
-          </div>
-          <button className="basket">Basket</button>
-        </div>
+        <Header />
         
         <div className="header_menu">
           <Router>

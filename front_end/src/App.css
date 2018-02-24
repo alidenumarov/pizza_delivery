@@ -79,6 +79,10 @@ li:hover {
   height: 200px;
   width: 200px;
 }
+.infoIcon {
+  height: 20px;
+  width: 20px;
+}
 .pizzaItem {
   display: inline-flex;
   flex-flow: column;
