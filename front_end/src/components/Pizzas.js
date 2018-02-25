@@ -11,10 +11,11 @@ class Pizzas extends Component {
 	constructor(props){
     	super(props);
     	this.state = {
-      		pizzaItems: [{id: 0, name: "Margarita", description: "spicy", image: margarita},
-                  {id: 1, name: "Pepperoni", description: "tasty", image: pepperoni},
-                  {id: 2, name: "4 Cheeses", description: "salty", image: fourcheeses},
-				  {id: 3, name: "Super Meat", description: "meat", image: supermeat}],
+      		pizzaItems: [{id: 0, name: "Margarita", description: "spicy", image: margarita, price: "3150 тг"},
+                  {id: 1, name: "Pepperoni", description: "tasty", image: pepperoni, price: "2690 тг"},
+                  {id: 2, name: "4 Cheeses", description: "salty", image: fourcheeses, price: "3400 тг"},
+				  {id: 3, name: "Super Meat", description: "meat", image: supermeat, price: "3150 тг"}
+				],
     	}
   	};
   render() {
@@ -26,9 +27,9 @@ class Pizzas extends Component {
 			<h2>Pizzas page!</h2>
 			<br/>
 				{pizzaItems}
+			<br />
 		</div>
 	);
   }
 }
-
 export default Pizzas;

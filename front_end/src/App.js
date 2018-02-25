@@ -18,7 +18,6 @@ class App extends Component {
     return (
       <div className="header">
         <Header />
-        
         <div className="header_menu">
           <Router>
             <div>
