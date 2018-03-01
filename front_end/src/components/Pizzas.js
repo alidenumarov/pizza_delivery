@@ -106,14 +106,22 @@ class Pizzas extends Component {
 		// let pizzaItems = 
 		return (
 			<div className="container">
+<<<<<<< HEAD
 				<input className="search" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search Pizza"/>
 				
+=======
+				<input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search Pizza"/>
+>>>>>>> c0761b0834ff03df4bd956402603dffb9789fd20
 				<div>
 					{this.state.pizzaItems.filter(searchingFor(this.state.value)).map((pizza) => {
 						return <PizzaItem pizza={pizza} key={pizza.id} id={pizza.id} onAddToBasketClicked={this.onAddToBasketClicked}/>
 					})}
 				</div>
+<<<<<<< HEAD
 				<div className="basketParentCont">
+=======
+				<div>
+>>>>>>> c0761b0834ff03df4bd956402603dffb9789fd20
 					<h3>Basket Component</h3>
 					{this.renderBasketComponent()}
 					<TotalAmount pizzas={this.state.pizzaInBasket} />
