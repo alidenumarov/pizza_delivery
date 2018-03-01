@@ -9,6 +9,11 @@ import fourcheeses from '../img/fourcheeses.jpg';
 import supermeat from '../img/supermeat.jpg';
 // import InfoIcon from 'react-icons/lib/fa/info-circle';
 
+function searchingFor(txt) {
+	return function(x) {
+	 	return x.name.toLowerCase().includes(txt.toLowerCase());
+	}
+}
 class Pizzas extends Component {
 	constructor(props){
     	super(props);
@@ -21,11 +26,16 @@ class Pizzas extends Component {
 			pizzaInBasket: [{
 				id: 'noId', name: '' , image: '', price: '', isAdded: false, count: 0
 			}],
-			isNewPizzaAdded: false
+			isNewPizzaAdded: false,
+			value: '',
 		}
 		this.onAddToBasketClicked = this.onAddToBasketClicked.bind(this);
 		this.renderBasketComponent = this.renderBasketComponent.bind(this);
-	};
+		this.handleChange = this.handleChange.bind(this);
+	}
+	handleChange(event) {
+		this.setState({value: event.target.value});
+	}
 	onAddToBasketClicked(curPizza) {
 		if(curPizza !== undefined) {
 			this.setState({isNewPizzaAdded: true});
@@ -92,15 +102,15 @@ class Pizzas extends Component {
 		}
 		this.setState({pizzaInBasket: newPizzaCount});
 	}
-
   	render() {
-		let pizzaItems = this.state.pizzaItems.map((pizza) => {
-			return <PizzaItem pizza={pizza} key={pizza.id} id={pizza.id} onAddToBasketClicked={this.onAddToBasketClicked}/>
-		})
+		// let pizzaItems = 
 		return (
 			<div className="container">
+				<input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search Pizza"/>
 				<div>
-					{pizzaItems}
+					{this.state.pizzaItems.filter(searchingFor(this.state.value)).map((pizza) => {
+						return <PizzaItem pizza={pizza} key={pizza.id} id={pizza.id} onAddToBasketClicked={this.onAddToBasketClicked}/>
+					})}
 				</div>
 				<div>
 					<h3>Basket Component</h3>
