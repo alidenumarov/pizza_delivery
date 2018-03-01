@@ -36,13 +36,15 @@
   height: 80px;
 }
 .header_menu {
+  text-align: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 10px 0;
   flex-direction: row;
 }
-.header ul {
+.container ul { 
+  text-align: center;
+  margin: 0 auto;
   display: inline-flex;
   background: #000000;
   list-style-type: none;
@@ -66,11 +68,24 @@ h2 {
 li:hover {
   background: red;
 }
+.banner {
+  margin-top: 20px;
+  width: 1200px;
+}
+.container_items {
+  width: 980px;
+  margin: 0 auto;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 1200px;
+}
 
 /*---PIZZAS---*/
-.container {
-  width: 980px;
-}
 .pizzaItems {
   display: inline-flex;
   padding: 10px 20px 10px 20px;
@@ -95,4 +110,78 @@ li:hover {
   width: max-content;
   margin-left: -110px;
   margin-top: 125px;
+}
+.addTo {
+  padding: 10px 40px 10px 40px;
+  background-color: #ffffff;
+  color: red;
+  font-size: 18px;
+  border: 1px solid red;
+  border-radius: 15px;
+}
+.addTo:hover {
+  background-color: red;
+  color: #ffffff;
+  cursor: pointer;
+}
+.pizzaDescription {
+  display: flex;
+  flex-flow: column;
+  margin: 25px 0 25px 0;
+}
+.pairDescription {
+  display: inline-flex;
+}
+.pairDescription h4{
+  font-size: 16px;
+  margin: 10px 20px 10px 20px;
+}
+.pairSecond {
+  float: right;
+}
+
+/*MODAL*/
+.modal-overlay-div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .65);
+}
+
+.modal-content-div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    overflow: auto;
+    text-align: center;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.modal-content-div:after {
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+    margin-left: -.05em;
+    content: '';
+}
+
+.modal-dialog-div {
+    position: relative;
+    outline: 0;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    max-width: auto;
+    cursor: default;
+    border-radius: 4px;
 }

@@ -10,13 +10,14 @@ import Drinks from './components/Drinks';
 import Snacks from './components/Snacks';
 import Discounts from './components/Discounts';
 import Contacts from './components/Contacts';
-import Header from './components/Header'
-/*import logos from './palermo-pizza-logo.jpeg';*/
+import Header from './components/Header';
+import Basket from './components/Basket';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="header">
+      <div className="container">
         <Header />
         <div className="header_menu">
           <Router>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../App.css';
-// import InfoIcon from 'react-icons/lib/fa/info-circle';
 
 class PizzaDetails extends Component {
 	constructor(props){
