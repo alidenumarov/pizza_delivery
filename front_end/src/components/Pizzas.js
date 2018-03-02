@@ -7,6 +7,8 @@ import margarita from '../img/margarita.jpg';
 import pepperoni from '../img/pepperoni.jpg';
 import fourcheeses from '../img/fourcheeses.jpg';
 import supermeat from '../img/supermeat.jpg';
+import sauce from '../img/sauce.jpg';
+import chicken from '../img/chiken.jpg';
 // import InfoIcon from 'react-icons/lib/fa/info-circle';
 
 function searchingFor(txt) {
@@ -21,11 +23,11 @@ class Pizzas extends Component {
       		pizzaItems: [{id: 0, name: "Margarita", description: "spicy", image: margarita, price: 3150},
                   {id: 1, name: "Pepperoni", description: "tasty", image: pepperoni, price: 2690},
                   {id: 2, name: "4 Cheeses", description: "salty", image: fourcheeses, price: 3400},
-				  {id: 3, name: "Super Meat", description: "meat", image: supermeat, price: 3150}
+				  {id: 3, name: "Super Meat", description: "meat", image: supermeat, price: 3150},
+				  {id: 4, name: "Sauce", description: "cheese", image: sauce, price: 1000},
+				  {id: 5, name: "Chicken", description: "chicken", image: chicken, price: 2810}
 				],
-			pizzaInBasket: [{
-				id: 'noId', name: '' , image: '', price: '', isAdded: false, count: 0
-			}],
+			pizzaInBasket: [],
 			isNewPizzaAdded: false,
 			value: '',
 		}
@@ -102,28 +104,22 @@ class Pizzas extends Component {
 		}
 		this.setState({pizzaInBasket: newPizzaCount});
 	}
-  	render() {
-		// let pizzaItems = 
+  	render() { 
 		return (
 			<div className="container">
-<<<<<<< HEAD
 				<input className="search" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search Pizza"/>
 				
-=======
-				<input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search Pizza"/>
->>>>>>> c0761b0834ff03df4bd956402603dffb9789fd20
 				<div>
 					{this.state.pizzaItems.filter(searchingFor(this.state.value)).map((pizza) => {
 						return <PizzaItem pizza={pizza} key={pizza.id} id={pizza.id} onAddToBasketClicked={this.onAddToBasketClicked}/>
 					})}
+
 				</div>
-<<<<<<< HEAD
 				<div className="basketParentCont">
-=======
-				<div>
->>>>>>> c0761b0834ff03df4bd956402603dffb9789fd20
-					<h3>Basket Component</h3>
+					<h3 className="basketHeader">BASKET</h3>
+					<hr />
 					{this.renderBasketComponent()}
+					<hr />
 					<TotalAmount pizzas={this.state.pizzaInBasket} />
 				</div>
 			</div>

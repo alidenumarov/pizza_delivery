@@ -12,16 +12,15 @@
   text-align: center;
   padding: 20px 60px 20px 60px;
 }
-.logo button {
+.confirm {
   padding: 10px 40px 10px 40px;
   background-color: red;
   color: #ffffff;
   font-size: 18px;
-  margin: 40px 0 0 260px;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
 }
-.logo button:hover {
+.confirm:hover {
   background-color: #000000;
   cursor: pointer;
 }
@@ -57,7 +56,7 @@ li{
 a {
   color: #ffffff;
   text-decoration: none;
-  padding: 30px;
+  padding: 20px 93px 0 92px;
   margin: 0 15px 0 15px;
   font-size: 18px;
 }
@@ -69,22 +68,40 @@ li:hover {
   background: red;
 }
 .banner {
-  margin-top: 20px;
-  width: 1200px;
+  margin-top: 10px;
+  width: 1500px;
+  height: 200px;
+  margin-left: 275px;
+}
+.basketHeader {
+  margin-left: -20px;
 }
 .container_items {
-  width: 980px;
-  margin: 0 auto;
-  align-items: center;
+  width: 1180px;
 }
 .container {
   display: flex;
   flex-flow: column;
   align-items: center;
   margin: 0 auto;
-  width: 1200px;
+  width: 1250px;
+  margin-left: 0px;
 }
-
+.bContainer {
+  display: flex;
+  /*flex-flow: column;*/
+  align-items: center;
+  margin-left: -50px;
+  width: auto;
+}
+.basketParentCont {
+  /*border: 1px solid black;*/
+  /*width: 300px;*/
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 700px;
+  /*width: 100px;*/
+}
 /*---PIZZAS---*/
 .pizzaItems {
   display: inline-flex;
@@ -103,15 +120,43 @@ li:hover {
   border: 1px solid black;
   padding: 20px;
 }
+.sign {
+  background-color: #ffffff;
+  color: red;
+  border-radius: 5px;
+  border: 1px solid red;
+  margin: 0 2px 0 2px;
+  padding: 0 4px 0 4px;
+}
+.sign:hover {
+  color: #ffffff;
+  background-color: red;
+  cursor: pointer;
+}
 .pizzaDetails {
+  border-radius: 4px;
+  padding: 10px 0 10px 0;
   border: 1px solid black;
-  background-color: azure;
+  background-color: #000000;
+  color: #ffffff;
   position: absolute;
   width: max-content;
   margin-left: -110px;
   margin-top: 125px;
 }
-<<<<<<< HEAD
+.containerAmount {
+  width: max-content;
+}
+.basketPizzaImg {
+  width: 50px;
+  height: 50px;
+}
+.basketContainer {
+  border: 1px solid black;
+  background-color: azure;
+  position: absolute;
+  width: 200px;
+}
 .addTo {
   padding: 10px 40px 10px 40px;
   background-color: #ffffff;
@@ -140,60 +185,58 @@ li:hover {
 .pairSecond {
   float: right;
 }
-
-/*MODAL*/
-.modal-overlay-div {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, .65);
+.modalBackground {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
 }
-
-.modal-content-div {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10000;
-    overflow: auto;
-    text-align: center;
-    padding: 4px;
-    cursor: pointer;
+.modal {
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
 }
-
-.modal-content-div:after {
-    vertical-align: middle;
-    display: inline-block;
-    height: 100%;
-    margin-left: -.05em;
-    content: '';
+.modalHeader {
+  float: right;
 }
-
-.modal-dialog-div {
-    position: relative;
-    outline: 0;
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
-    box-sizing: border-box;
-    max-width: auto;
-    cursor: default;
-    border-radius: 4px;
-=======
-.basketPizzaImg {
-  width: 50px;
-  height: 50px;
+.modalExit {
+  margin-top: 10px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
-.basketContainer {
-  border: 1px solid black;
-  background-color: azure;
-  position: absolute;
-  width: 200px;
->>>>>>> c0761b0834ff03df4bd956402603dffb9789fd20
+.modalInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.modalSubmit {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search {
+  width: 980px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }

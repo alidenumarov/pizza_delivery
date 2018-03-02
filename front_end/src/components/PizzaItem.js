@@ -46,12 +46,8 @@ class PizzaItem extends Component {
 						</h3>
 						{this.props.pizza.description}
 						<p>	{this.props.pizza.price}тг
-<<<<<<< HEAD
 							<button className="addTo"
 							onClick={(e) => this.onAddToBasketClicked(this.props.pizza)} >Add to basket</button>
-=======
-							<button onClick={(e) => this.onAddToBasketClicked(this.props.pizza)} >Add to basket</button>
->>>>>>> c0761b0834ff03df4bd956402603dffb9789fd20
 						</p>
 					</div>
     			</div>
