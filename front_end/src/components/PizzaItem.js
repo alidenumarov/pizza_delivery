@@ -21,7 +21,6 @@ class PizzaItem extends Component {
 	}
 
 	handleAddToBasketClick = () => {
-		// console.log(this.props.pizza.name);
 		if(!this.state.isAddtoBasketClick) {
 			this.setState({isAddtoBasketClick: true});
 			// alert("Clicked");
@@ -59,7 +58,7 @@ class PizzaItem extends Component {
 			return(
 				<span>
 					{this.renderAlwaysSection()}
-					<span className="pizzaDetails"><PizzaDetails id={this.props.id}/></span>
+					<span className="pizzaDetails"><PizzaDetails id={this.props.pizza.id}/></span>
 				</span>
 			);
 		} else
